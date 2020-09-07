@@ -1,9 +1,6 @@
-// ESM syntax is supported.
-export {}
-
 const mqtt = require('mqtt');
 const NodeSSH = require('node-ssh')
-const wol = require('node-wol');
+const wol = require('wake_on_lan');
 
 const prefix = "wol/";
 const {
@@ -16,15 +13,6 @@ const {
     MQ_USER,
     MQ_PASS
 } = process.env;
-
-console.log(`WOL_HOST: ${WOL_HOST}`)
-console.log(`WOL_USER: ${WOL_USER}`)
-console.log(`WOL_PASS: ${WOL_PASS}`)
-console.log(`WOL_MAC: ${WOL_MAC}`)
-console.log(`WOL_BROADCAST_ADDR: ${WOL_BROADCAST_ADDR}`)
-console.log(`MQ_HOST: ${MQ_HOST}`)
-console.log(`MQ_USER: ${MQ_USER}`)
-console.log(`MQ_PASS: ${MQ_PASS}`)
 
 if (!WOL_HOST || !WOL_USER || !WOL_PASS || !WOL_MAC || !WOL_BROADCAST_ADDR || !MQ_HOST || !MQ_USER || !MQ_PASS) {
     console.log("Environment vars not configured");

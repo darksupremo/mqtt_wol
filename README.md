@@ -24,9 +24,3 @@ Message: **0**
 - **MQ_HOST** - _MQTT Host_
 - **MQ_USER** - _MQTT User_
 - **MQ_PASS** - _MQTT Password_
-
-**On windows**, Environment variables needs to be defined also in an special var to be recognized by WSL2, example:  
-**Name:** WSLENV  
-**Value:** WOL_HOST:WOL_USER:WOL_PASS:WOL_MAC:WOL_BROADCAST_ADDR:MQ_HOST:MQ_USER:MQ_PASS  
-
-Define it normally, then append it to the **WSLENV**    
