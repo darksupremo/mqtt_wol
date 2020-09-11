@@ -1,5 +1,5 @@
 const mqtt = require('mqtt');
-const NodeSSH = require('node-ssh')
+const {NodeSSH} = require('node-ssh')
 const wol = require('wake_on_lan');
 
 const prefix = "wol/";
