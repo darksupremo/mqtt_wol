@@ -11,7 +11,8 @@ const {
     WOL_BROADCAST_ADDR,
     MQ_HOST,
     MQ_USER,
-    MQ_PASS
+    MQ_PASS,
+    MQ_CLIENT_ID,
 } = process.env;
 
 if (!WOL_HOST || !WOL_USER || !WOL_PASS || !WOL_MAC || !WOL_BROADCAST_ADDR || !MQ_HOST || !MQ_USER || !MQ_PASS) {
@@ -20,7 +21,7 @@ if (!WOL_HOST || !WOL_USER || !WOL_PASS || !WOL_MAC || !WOL_BROADCAST_ADDR || !M
 }
 
 const client  = mqtt.connect(`mqtt://${MQ_HOST}`, {
-    clientId: "mqtt_wol",
+    clientId: MQ_CLIENT_ID || "mqtt_wol",
     username: MQ_USER,
     password: MQ_PASS
 });
