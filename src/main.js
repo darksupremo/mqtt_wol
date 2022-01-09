@@ -20,6 +20,7 @@ if (!WOL_HOST || !WOL_USER || !WOL_PASS || !WOL_MAC || !WOL_BROADCAST_ADDR || !M
 }
 
 const client  = mqtt.connect(`mqtt://${MQ_HOST}`, {
+    clientId: "mqtt_wol",
     username: MQ_USER,
     password: MQ_PASS
 });
